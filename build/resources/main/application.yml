@@ -1,7 +1,0 @@
-debug: false
-
-logging:
-  level:
-    com:
-      example:
-        springboot: DEBUG
