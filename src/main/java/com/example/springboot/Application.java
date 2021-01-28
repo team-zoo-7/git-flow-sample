@@ -8,6 +8,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Arrays;
+
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @Slf4j
 public class Application {
@@ -22,6 +24,11 @@ public class Application {
 
             log.info("Let's inspect the beans provided by Spring Boot:");
 
+            String[] beanNames = ctx.getBeanDefinitionNames();
+            Arrays.sort(beanNames);
+            for (String beanName : beanNames) {
+                log.info(beanName);
+            }
         };
     }
 
