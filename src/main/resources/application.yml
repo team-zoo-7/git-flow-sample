@@ -5,3 +5,6 @@ logging:
     com:
       example:
         springboot: ERROR
+
+server:
+  port: 8090
