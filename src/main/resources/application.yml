@@ -4,4 +4,7 @@ logging:
   level:
     com:
       example:
-        springboot: DEBUG
+        springboot: ERROR
+
+server:
+  port: 8090
